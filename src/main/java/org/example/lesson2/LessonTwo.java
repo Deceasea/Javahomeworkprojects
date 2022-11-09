@@ -6,6 +6,7 @@ public class LessonTwo {
         checkNumber(8);
         System.out.println(checkNumberTwo (-7));
         repeatingString("Shame on you!", 3);
+        checkYear(1504);
     }
     public static boolean checkSum( int a, int b ) {
         return a + b >= 10 && a + b <= 20;
@@ -27,6 +28,13 @@ public class LessonTwo {
         for (int i = 0; i < y; i++) {
             System.out.println(str);
         }
+    }
+
+    public static void checkYear(int a) {
+        System.out.println("Високосный: " + (
+                (((a % 4) == 0) && ((a % 100) != 0)) ||
+                ((((a % 100) == 0)) && ((a % 400) == 0)))
+        );
     }
 }
 
